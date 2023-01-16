@@ -1,9 +1,19 @@
-import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import './app.css'
+import { useState } from "preact/hooks";
+import preactLogo from "./assets/preact.svg";
+import "./app.css";
+
+async function getPost(id: number) {
+  const data = await fetch(`http://localhost:3000/posts/${id}`)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+  return data;
+}
 
 export function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const post = getPost(1);
+  console.log(post);
 
   return (
     <>
@@ -28,5 +38,5 @@ export function App() {
         Click on the Vite and Preact logos to learn more
       </p>
     </>
-  )
+  );
 }
