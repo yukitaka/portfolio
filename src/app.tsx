@@ -1,5 +1,6 @@
 import { useState } from "preact/hooks";
 import preactLogo from "./assets/preact.svg";
+import Header from "@/components/header/index";
 import "./app.css";
 
 async function getPost(id: number) {
@@ -17,6 +18,7 @@ export function App() {
 
   return (
     <>
+      <Header />
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" class="logo" alt="Vite logo" />
