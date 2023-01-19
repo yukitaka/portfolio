@@ -16,6 +16,9 @@ export function App() {
   return (
     <>
       <Header />
+      <div>
+        <p>Enjoy engineering of the web with dogs!</p>
+      </div>
     </>
   );
 }
