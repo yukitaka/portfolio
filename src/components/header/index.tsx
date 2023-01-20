@@ -1,10 +1,11 @@
 import { h } from "preact";
+import { useCallback, useEffect, useState } from "preact/hooks";
 import { styled, setup } from "goober";
 
 setup(h);
 
 const Hamburger = styled("div")`
-  display: block;
+  display: inline-block;
   position: absolute;
   box-sizing: initial;
   right: 0;
@@ -53,13 +54,46 @@ const SubTitle = styled("div")`
 `;
 
 export default function Header() {
+  const [open, setOpen] = useOverlayToggle();
+  const toggle = useCallback(() => setOpen(!open), [open]);
+
   return (
     <header>
       <Title>DOG DRIVEN ENGINEER</Title>
       <SubTitle>
         <p>Enjoy engineering of the web with dogs!</p>
       </SubTitle>
-      <Hamburger />
+      <Hamburger open={open} onClick={toggle} />
     </header>
   );
+}
+
+function useOverlayToggle() {
+  const [open, setOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (open) setHeight();
+
+    function onResize() {
+      if (open) {
+        if (window.innerWidth >= convertRemToPixels(50)) {
+          setOpen(false);
+        }
+        setHeight();
+      }
+    }
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [open]);
+
+  return [open, setOpen] as const;
+}
+
+function setHeight() {
+  let vh = window.innerWidth;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+
+function convertRemToPixels(rem: number) {
+  return rem * Number(getComputedStyle(document.documentElement).fontSize);
 }
