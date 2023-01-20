@@ -19,5 +19,7 @@
     }
   },
   "ignorePatterns": ["*.d.ts"],
-  "rules": {}
+  "rules": {
+    "indent": ["error", 4]
+  }
 }
