@@ -5,7 +5,7 @@ import { styled, setup } from "goober";
 setup(h);
 
 const Hamburger = styled("div")`
-  display: inline-block;
+  display: none;
   position: absolute;
   box-sizing: initial;
   right: 0;
@@ -14,12 +14,16 @@ const Hamburger = styled("div")`
   width: 20px;
   height: 20px;
   padding: 18px 23px 12px;
-  line-height: @header-height;
+  line-height: 3.5rem;
   text-align: center;
   z-index: 100;
   opacity: 0.7;
   cursor: pointer;
   transition: opacity 250ms ease;
+
+  @media (max-width: 50rem) {
+    display: block;
+  }
 
   &:hover {
     opacity: 1;
