@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { styled, setup } from "goober";
+import Menu from "./menu";
 import Hamburger from "./hamburger";
 
 setup(h);
@@ -22,12 +23,12 @@ const SubTitle = styled("div")`
 export default function Header() {
     return (
         <header>
+            <Menu />
+            <Hamburger />
             <Title>DOG DRIVEN ENGINEER</Title>
             <SubTitle>
                 <p>Enjoy engineering of the web with dogs!</p>
             </SubTitle>
-
-            <Hamburger />
         </header>
     );
 }
