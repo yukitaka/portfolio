@@ -24,12 +24,11 @@ export default function Header() {
     return (
         <header>
             <Menu />
+            <Hamburger />
             <Title>DOG DRIVEN ENGINEER</Title>
             <SubTitle>
                 <p>Enjoy engineering of the web with dogs!</p>
             </SubTitle>
-
-            <Hamburger />
         </header>
     );
 }

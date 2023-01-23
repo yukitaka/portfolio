@@ -4,6 +4,8 @@ import { styled, setup } from "goober";
 setup(h);
 
 const MenuContainer = styled("ul")`
+  position: absolute;
+  top: 0;
   display: flex;
   list-style: none;
 `;
