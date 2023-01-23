@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { styled, setup } from "goober";
+import Menu from "./menu";
 import Hamburger from "./hamburger";
 
 setup(h);
@@ -19,25 +20,10 @@ const SubTitle = styled("div")`
   text-align: right;
 `;
 
-const Menu = styled("ul")`
-  display: flex;
-  list-style: none;
-`;
-
-const MenuItem = styled("li")`
-  display: flex;
-  box-sizing: border-box;
-  padding: 10px;
-`;
-
 export default function Header() {
     return (
         <header>
-            <Menu>
-                <MenuItem>ABOUT</MenuItem>
-                <MenuItem>SKILLS</MenuItem>
-                <MenuItem>CONTACT</MenuItem>
-            </Menu>
+            <Menu />
             <Title>DOG DRIVEN ENGINEER</Title>
             <SubTitle>
                 <p>Enjoy engineering of the web with dogs!</p>
