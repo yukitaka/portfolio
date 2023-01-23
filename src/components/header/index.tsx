@@ -19,9 +19,25 @@ const SubTitle = styled("div")`
   text-align: right;
 `;
 
+const Menu = styled("ul")`
+  display: flex;
+  list-style: none;
+`;
+
+const MenuItem = styled("li")`
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+`;
+
 export default function Header() {
     return (
         <header>
+            <Menu>
+                <MenuItem>ABOUT</MenuItem>
+                <MenuItem>SKILLS</MenuItem>
+                <MenuItem>CONTACT</MenuItem>
+            </Menu>
             <Title>DOG DRIVEN ENGINEER</Title>
             <SubTitle>
                 <p>Enjoy engineering of the web with dogs!</p>
