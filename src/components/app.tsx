@@ -1,4 +1,6 @@
+import { h } from "preact";
 import Header from "@/components/header/index";
+import Routes from "@/components/routes";
 import "./app.css";
 
 async function getPost(id: number) {
@@ -9,13 +11,14 @@ async function getPost(id: number) {
     return data;
 }
 
-export function App() {
+export default function App() {
     const post = getPost(1);
     console.log(post);
 
     return (
         <>
             <Header />
+            <Routes />
         </>
     );
 }
