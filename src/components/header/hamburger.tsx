@@ -59,7 +59,9 @@ const HamburgerBread = styled("div")`
 
 export default function Hamburger() {
     const [open, setOpen] = useOverlayToggle();
-    const toggle = useCallback(() => setOpen(!open), [open]);
+    const toggle = useCallback(() => {
+        setOpen(!open), [open];
+    }, [setOpen, open]);
 
     return (
         <Container open={open} onClick={toggle}>
