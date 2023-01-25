@@ -3,7 +3,12 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "preact", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "preact",
+    "prettier"
+  ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -20,6 +25,11 @@
   },
   "ignorePatterns": ["*.d.ts"],
   "rules": {
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "semi": ["error", "never", { "beforeStatementContinuationChars": "never" }],
+    "semi-spacing": ["error", { "after": true, "before": false }],
+    "semi-style": ["error", "first"],
+    "no-extra-semi": "error",
+    "no-unreachable": "error"
   }
 }

@@ -1,8 +1,8 @@
-import { h } from "preact";
-import { useCallback, useEffect, useState } from "preact/hooks";
-import { styled, setup } from "goober";
+import { h } from "preact"
+import { useCallback, useEffect, useState } from "preact/hooks"
+import { styled, setup } from "goober"
 
-setup(h);
+setup(h)
 
 const Container = styled("div")`
   display: none;
@@ -41,7 +41,7 @@ const Container = styled("div")`
     background: rgba(255, 255, 255, 0.2);
     transform: scale(0);
   }
-`;
+`
 
 const HamburgerBread = styled("div")`
   position: relative;
@@ -55,13 +55,13 @@ const HamburgerBread = styled("div")`
   font-size: 1px;
   transition: all 200ms ease;
   transform-origin: 0 0;
-`;
+`
 
 export default function Hamburger() {
-    const [open, setOpen] = useOverlayToggle();
+    const [open, setOpen] = useOverlayToggle()
     const toggle = useCallback(() => {
-        setOpen(!open), [open];
-    }, [setOpen, open]);
+        setOpen(!open), [open]
+    }, [setOpen, open])
 
     return (
         <Container open={open} onClick={toggle}>
@@ -69,35 +69,35 @@ export default function Hamburger() {
             <HamburgerBread />
             <HamburgerBread />
         </Container>
-    );
+    )
 }
 
 function useOverlayToggle() {
-    const [open, setOpen] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(false)
 
     useEffect(() => {
-        if (open) setHeight();
+        if (open) setHeight()
 
         function onResize() {
             if (open) {
                 if (window.innerWidth >= convertRemToPixels(50)) {
-                    setOpen(false);
+                    setOpen(false)
                 }
-                setHeight();
+                setHeight()
             }
         }
-        window.addEventListener("resize", onResize);
-        return () => window.removeEventListener("resize", onResize);
-    }, [open]);
+        window.addEventListener("resize", onResize)
+        return () => window.removeEventListener("resize", onResize)
+    }, [open])
 
-    return [open, setOpen] as const;
+    return [open, setOpen] as const
 }
 
 function setHeight() {
-    let vh = window.innerWidth;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    const vh = window.innerWidth
+    document.documentElement.style.setProperty("--vh", `${vh}px`)
 }
 
 function convertRemToPixels(rem: number) {
-    return rem * Number(getComputedStyle(document.documentElement).fontSize);
+    return rem * Number(getComputedStyle(document.documentElement).fontSize)
 }

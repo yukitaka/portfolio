@@ -1,9 +1,9 @@
-import { h } from "preact";
-import { styled, setup } from "goober";
-import Menu from "./menu";
-import Hamburger from "./hamburger";
+import { h } from "preact"
+import { styled, setup } from "goober"
+import Menu from "./menu"
+import Hamburger from "./hamburger"
 
-setup(h);
+setup(h)
 
 const Title = styled("h1")`
   width: 100%;
@@ -14,11 +14,11 @@ const Title = styled("h1")`
   font-size: 5em;
   text-align: center;
   letter-spacing: -0.02em;
-`;
+`
 
 const SubTitle = styled("div")`
   text-align: right;
-`;
+`
 
 export default function Header() {
     return (
@@ -30,5 +30,5 @@ export default function Header() {
                 <p>Enjoy engineering of the web with dogs!</p>
             </SubTitle>
         </header>
-    );
+    )
 }
