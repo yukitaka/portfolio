@@ -16,7 +16,8 @@
     "goober": "^2.1.11",
     "jest": "^29.3.1",
     "preact": "^10.11.3",
-    "preact-router": "^4.1.0"
+    "preact-router": "^4.1.0",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
