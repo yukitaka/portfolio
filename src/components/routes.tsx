@@ -4,7 +4,7 @@ import { Home } from "@/components/home"
 
 export default class Routes extends Component {
     handleRoute = (event) => {
-        let { onChange } = this.props
+        const { onChange } = this.props
         if (onchange) {
             onChange(event)
         }

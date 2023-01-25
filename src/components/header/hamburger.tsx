@@ -94,7 +94,7 @@ function useOverlayToggle() {
 }
 
 function setHeight() {
-    let vh = window.innerWidth
+    const vh = window.innerWidth
     document.documentElement.style.setProperty("--vh", `${vh}px`)
 }
 
