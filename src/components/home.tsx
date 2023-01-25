@@ -1,4 +1,4 @@
-import { h } from "preact";
+import { h } from "preact"
 export const Home = () => {
-    return <div>Home</div>;
-};
+    return <div>Home</div>
+}
