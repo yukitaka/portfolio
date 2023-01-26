@@ -1,6 +1,7 @@
 import { h, Component } from "preact"
-import { Router } from "preact-router"
+import { Router, Route } from "preact-router"
 import { Home } from "@/components/home"
+import { Profile } from "@/components/profile"
 
 export default class Routes extends Component {
     handleRoute = (event) => {
@@ -14,7 +15,8 @@ export default class Routes extends Component {
         return (
             <main>
                 <Router>
-                    <Home path="/" />
+                    <Route path="/" component={Home} />
+                    <Route path="/profile" component={Profile} />
                 </Router>
             </main>
         )
