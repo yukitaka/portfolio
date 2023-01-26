@@ -28,9 +28,9 @@ export default function Menu() {
                     <RiHome6Fill size={22} />
                 </a>
             </MenuItem>
-            <MenuItem>ABOUT</MenuItem>
+            <MenuItem>PROFILE</MenuItem>
+            <MenuItem>PORTFOLIO</MenuItem>
             <MenuItem>SKILLS</MenuItem>
-            <MenuItem>CONTACT</MenuItem>
         </MenuContainer>
     )
 }
