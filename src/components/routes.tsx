@@ -10,8 +10,7 @@ export default class Routes extends Component {
             onChange(event)
         }
     }
-    render({ url }) {
-        console.log(url)
+    render() {
         return (
             <main>
                 <Router>
