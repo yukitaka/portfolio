@@ -1,8 +1,5 @@
-import { h } from "preact"
-import { styled, setup } from "goober"
+import { styled } from "goober"
 import { FaTwitterSquare, FaGithub } from "react-icons/fa"
-
-setup(h)
 
 const Title = styled("h1")`
   width: 100%;
