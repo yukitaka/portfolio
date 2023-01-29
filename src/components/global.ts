@@ -1,3 +1,6 @@
+import { createGlobalStyles } from "goober/global"
+
+const GlobalStyles = createGlobalStyles`
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -68,3 +71,6 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+`
+
+export default GlobalStyles

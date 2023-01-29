@@ -1,6 +1,7 @@
 import { h } from "preact"
 import Header from "@/components/header/index"
 import Routes from "@/components/routes"
+import GlobalStyles from "@/components/global"
 import "./app.css"
 
 async function getPost(id: number) {
@@ -17,6 +18,7 @@ export default function App() {
 
     return (
         <>
+            <GlobalStyles />
             <Header />
             <Routes />
         </>
