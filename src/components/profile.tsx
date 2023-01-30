@@ -1,7 +1,10 @@
+import { h } from "preact"
+import { Title } from "@/components/styles"
+
 export const Profile = () => {
     return (
         <div>
-            <h2>PROFILE</h2>
+            <Title>PROFILE</Title>
         </div>
     )
 }
