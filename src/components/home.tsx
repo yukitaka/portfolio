@@ -2,7 +2,7 @@ import { styled } from "goober"
 import { FaTwitterSquare, FaGithub } from "react-icons/fa"
 
 const Title = styled("h1")`
-  width: 100%;
+  width: 700px;
   height: 50px;
   margin-bottom: 0.3em;
   color: white;
