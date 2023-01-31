@@ -15,6 +15,7 @@ specifiers:
   husky: ^8.0.3
   jest: ^29.3.1
   lint-staged: ^13.1.0
+  marked: ^4.2.12
   preact: ^10.11.3
   preact-router: ^4.1.0
   prettier: ^2.8.3
@@ -28,6 +29,7 @@ specifiers:
 dependencies:
   goober: 2.1.11
   jest: 29.3.1
+  marked: 4.2.12
   preact: 10.11.3
   preact-router: 4.1.0_preact@10.11.3
   react-icons: 4.7.1
@@ -5276,6 +5278,15 @@ packages:
       }
     engines: { node: ">=8" }
     dev: true
+
+  /marked/4.2.12:
+    resolution:
+      {
+        integrity: sha512-yr8hSKa3Fv4D3jdZmtMMPghgVt6TWbk86WQaWhDloQjRSQhMMYCAro7jP7VDJrjjdV8pxVxMssXS8B8Y5DZ5aw==,
+      }
+    engines: { node: ">= 12" }
+    hasBin: true
+    dev: false
 
   /meow/8.1.2:
     resolution:
