@@ -1,12 +1,12 @@
 import { h } from "preact"
 import { Title } from "@/components/styles"
 
-const Profile = () => {
+const Portfolio = () => {
     return (
         <div>
-            <Title>PROFILE</Title>
+            <Title>PORTFOLIO</Title>
         </div>
     )
 }
 
-export default Profile
+export default Portfolio

@@ -31,8 +31,12 @@ export default function Menu() {
             <MenuItem>
                 <a href="/profile">PROFILE</a>
             </MenuItem>
-            <MenuItem>PORTFOLIO</MenuItem>
-            <MenuItem>SKILLS</MenuItem>
+            <MenuItem>
+                <a href="/portfolio">PORTFOLIO</a>
+            </MenuItem>
+            <MenuItem>
+                <a href="/skills">SKILLS</a>
+            </MenuItem>
         </MenuContainer>
     )
 }
