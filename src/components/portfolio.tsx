@@ -1,10 +1,12 @@
 import { h } from "preact"
 import { Title } from "@/components/styles"
 
-export const Portfolio = () => {
+const Portfolio = () => {
     return (
         <div>
             <Title>PORTFOLIO</Title>
         </div>
     )
 }
+
+export default Portfolio

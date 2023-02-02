@@ -14,7 +14,7 @@ const Contact = styled("div")`
   }
 `
 
-export const Home = () => {
+const Home = () => {
     return (
         <div>
             <Title>DOG DRIVEN ENGINEER</Title>
@@ -32,3 +32,5 @@ export const Home = () => {
         </div>
     )
 }
+
+export default Home

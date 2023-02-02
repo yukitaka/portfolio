@@ -1,10 +1,12 @@
 import { h } from "preact"
 import { Title } from "@/components/styles"
 
-export const Skills = () => {
+const Skills = () => {
     return (
         <div>
             <Title>SKILLS</Title>
         </div>
     )
 }
+
+export default Skills
