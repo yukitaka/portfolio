@@ -1,6 +1,17 @@
 import { styled } from "goober"
 import { FaTwitterSquare, FaGithub } from "react-icons/fa"
-import { Title } from "@/components/styles"
+
+export const MainTitle = styled("h1")`
+  width: 700px;
+  height: 50px;
+  margin-bottom: 0.3em;
+  color: white;
+  font-family: impact;
+  font-size: 5em;
+  text-align: center;
+  align-self: center;
+  letter-spacing: -0.02em;
+`
 
 const SubTitle = styled("div")`
   text-align: right;
@@ -17,7 +28,7 @@ const Contact = styled("div")`
 const Home = () => {
     return (
         <div>
-            <Title>DOG DRIVEN ENGINEER</Title>
+            <MainTitle>DOG DRIVEN ENGINEER</MainTitle>
             <SubTitle>
                 <p>Enjoy engineering of the web with dogs!</p>
             </SubTitle>
