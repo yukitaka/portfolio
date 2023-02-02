@@ -30,7 +30,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: ${(props) => props.verticalAlign};
+  justify-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
