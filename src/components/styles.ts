@@ -2,11 +2,10 @@ import { styled } from "goober"
 
 export const Title = styled("h1")`
   width: 700px;
-  height: 50px;
-  margin-bottom: 0.3em;
   color: white;
   font-family: impact;
-  font-size: 5em;
-  text-align: center;
+  font-size: 3em;
+  text-align: left;
+  border-bottom: 1px solid white;
   letter-spacing: -0.02em;
 `
