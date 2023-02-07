@@ -1,16 +1,11 @@
-# Portfolio
+# fresh project
 
-## Development
+### Usage
 
-### Json Mocking
-
-```
-json-server --watch mock/contents.json
-```
-
-### Dev Server
+Start the project:
 
 ```
-pnpm install
-pnpm dev
+deno task start
 ```
+
+This will watch the project directory and restart as necessary.
