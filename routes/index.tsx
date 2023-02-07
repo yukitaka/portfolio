@@ -1,5 +1,6 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { getContent, getContents, Content } from "@/utils/contents.ts";
+import { FaTwitterSquare, FaGithub } from "react-icons/fa";
 
 export const handler: Handlers<Content[]> = {
   async GET(_req, ctx) {
@@ -12,9 +13,17 @@ export default function ContentIndexPage(props: PageProps<Content[]>) {
   const contents = props.data;
   return (
     <main class="max-w-screen-md px-4 pt-16 mx-auto">
-      <h1 class="text-7xl tracking-tighter font-impact">DOG DRIVEN ENGINEER</h1>
-      <div>
+      <h1 class="text-right text-7xl tracking-tighter font-impact">DOG DRIVEN ENGINEER</h1>
+      <div class="-mt-2 p-0 text-right">
         <p>Enjoy engineering of the web with dogs!</p>
+      </div>
+      <div class="mt-5 text-right tracking-widest gap-3">
+        <a class="inline-flex px-1" href="https://twitter.com/yukitaka1974">
+          <FaTwitterSquare size={20} />
+        </a>
+        <a class="inline-flex" href="https://github.com/yukitaka">
+          <FaGithub size={20} />
+        </a>
       </div>
       <div class="mt-8">
         {contents.map((content) => <ContentCard content={content} />)}
