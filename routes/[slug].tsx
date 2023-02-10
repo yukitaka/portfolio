@@ -18,7 +18,7 @@ export default function ContentPage(props: PageProps<Content>) {
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
       <main class="max-w-screen-md px-4 pt-16 mx-auto">
-        <h1 class="text-5xl font-bold">{content.title}</h1>
+        <h1 class="text-5xl font-bold pl-4 pb-2 border-l-8 border-b-1">{content.title}</h1>
       </main>
     </>
   );
