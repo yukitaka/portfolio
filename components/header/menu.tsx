@@ -1,11 +1,11 @@
-import { RiHome6Fill } from "react-icons/ri";
+import { BiHomeSmile } from "react-icons/bi";
 
 export default function Menu() {
     return (
         <ul class="mt-3 flex justify-center gap-3">
             <li>
-                <a href="/">
-                    <RiHome6Fill size={22} />
+                <a href="/" style="border-style: none">
+                    <BiHomeSmile size={22} />
                 </a>
             </li>
             <li>

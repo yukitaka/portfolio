@@ -361,6 +361,7 @@
     "https://deno.land/x/gfm@0.1.26/style.js": "8c149019a4ed464097af73dadec887e9171e027db58a36c88353aaaf6671df82",
     "https://deno.land/x/importmap@0.2.1/_util.ts": "ada9a9618b537e6c0316c048a898352396c882b9f2de38aba18fd3f2950ede89",
     "https://deno.land/x/importmap@0.2.1/mod.ts": "ae3d1cd7eabd18c01a4960d57db471126b020f23b37ef14e1359bbb949227ade",
+    "https://deno.land/x/react_icons@0.1.0/bi/mod.ts": "39a6a9c2352df977eba98c00b3c2b25b1c98798f3b45adc36fb3a5a28b76e11a",
     "https://deno.land/x/react_icons@0.1.0/fa/mod.ts": "11d69f54561711639595f6cbe4973af2a00d14715656e6420d6ad89b6b44b110",
     "https://deno.land/x/react_icons@0.1.0/lib/iconBase.tsx": "d1e0874730fefa788897f98b05da75ce9a43edcb7f4d32a033a56f96d79f0cc4",
     "https://deno.land/x/react_icons@0.1.0/lib/iconContext.tsx": "064c0e8b0c50fa774f53c2ccf02001d79fa7853c4bdb39006eb627f81d4cd38f",
