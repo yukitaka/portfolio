@@ -1,6 +1,7 @@
 import { BiHomeSmile } from "react-icons/bi";
 
 export default function Menu() {
+    const links = ["profile", "portfolio", "skills"]
     return (
         <ul class="mt-3 flex justify-center gap-3">
             <li>
@@ -8,15 +9,13 @@ export default function Menu() {
                     <BiHomeSmile size={22} />
                 </a>
             </li>
-            <li>
-                <a href="/profile">PROFILE</a>
-            </li>
-            <li>
-                <a href="/portfolio">PORTFOLIO</a>
-            </li>
-            <li>
-                <a href="/skills">SKILLS</a>
-            </li>
+            {
+              links.map(name => (
+                <li>
+                  <a href={name} class="hover:underline hover:font-bold">{name.toUpperCase()}</a>
+                </li>
+              ))
+            }
         </ul>
     );
 }
