@@ -26,10 +26,11 @@ export async function getContents(): Promise<Content[]> {
 export async function getContent(slug: string): Promise<Content | null> {
   const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
   const { attrs, body } = extract(text);
+  console.log(body.split("\n").join('<br />'))
   return {
     slug,
     title: attrs.title,
     publishedAt: new Date(attrs.published_at),
-    content: body
+    content: body.split("\n").join("<br />")
   };
 }

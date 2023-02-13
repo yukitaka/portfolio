@@ -17,7 +17,7 @@ export default function ContentIndexPage(props: PageProps<Content>) {
       <MainTitle />
       <Contacts />
       <div class="max-w-screen-md px-4 pt-16 mx-auto">
-        <p>{content.content}</p>
+        <p dangerouslySetInnerHTML={{ __html: content.content }} />
       </div>
     </div>
   );
