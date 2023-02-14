@@ -1,5 +1,5 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import { getContent, getContents, Content } from "@/utils/contents.ts";
+import { getContent, Content } from "@/utils/contents.ts";
 import MainTitle from "@/components/title.tsx";
 import Contacts from "@/components/contacts.tsx";
 
