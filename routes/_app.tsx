@@ -22,7 +22,7 @@ export default function App({ Component }: AppProps) {
         <header>
           <Menu />
         </header>
-        <main class="container mx-auto p-4">
+        <main class="container mx-auto p-4 flex">
           <Component />
         </main>
       </body>
