@@ -8,6 +8,8 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
     "react-icons/fa": "https://deno.land/x/react_icons@0.1.0/fa/mod.ts",
     "react-icons/bi": "https://deno.land/x/react_icons@0.1.0/bi/mod.ts",
+    "marked": "https://deno.land/x/markdown@v2.0.0",
+    "marked/": "https://deno.land/x/markdown@v2.0.0/",
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
     "$std/": "https://deno.land/std@0.160.0/",

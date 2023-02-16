@@ -1,5 +1,6 @@
 import { extract } from "$std/encoding/front_matter.ts";
 import { join } from "$std/path/posix.ts";
+import { Marked } from "marked/mod.ts";
 
 const DIRECTORY = "./contents";
 
@@ -25,11 +26,12 @@ export async function getContents(): Promise<Content[]> {
 
 export async function getContent(slug: string): Promise<Content | null> {
   const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
-  const { attrs, body } = extract(text);
+  const markup = Marked.parse(text);
+  console.log(markup)
   return {
     slug,
-    title: attrs.title,
-    publishedAt: new Date(attrs.published_at),
-    content: body.split("\n").join("<br />")
+    title: markup.meta.title,
+    publishedAt: new Date(markup.meta.published_at),
+    content: markup.content
   };
 }
