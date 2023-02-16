@@ -22,7 +22,7 @@ export default function ContentIndexPage(props: PageProps<Content>) {
         <img src={imgUrl} class="animate-fadein" />
       </div>
       <div class="max-w-screen-md px-4 pt-8 mx-auto">
-        <p dangerouslySetInnerHTML={{ __html: content.content }} class="animate-slide" />
+        <div dangerouslySetInnerHTML={{ __html: content.content }} class="animate-slide" />
       </div>
     </div>
   );
