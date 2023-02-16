@@ -19,6 +19,9 @@ export default function ContentPage(props: PageProps<Content>) {
       </Head>
       <main class="max-w-screen-md px-4 pt-8 mx-auto">
         <h1 class="text-2xl font-bold pl-2 pb-1 border-b-2 border-dotted w-screen align-top">{content.title}</h1>
+        <div class="max-w-screen-md px-4 pt-8 mx-auto">
+          <p dangerouslySetInnerHTML={{ __html: content.content }} />
+        </div>
       </main>
     </>
   );
