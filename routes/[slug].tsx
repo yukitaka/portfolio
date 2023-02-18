@@ -6,6 +6,10 @@ import { CSS, render } from "$gfm";
 export const handler: Handlers<Content> = {
   async GET(_req, ctx) {
     const content = await getContent(ctx.params.slug);
+    if (!content) {
+      console.log("INNNNNN");
+      return ctx.renderNotFound();
+    }
     return ctx.render(content as Content);
   },
 };

@@ -25,13 +25,18 @@ export async function getContents(): Promise<Content[]> {
 }
 
 export async function getContent(slug: string): Promise<Content | null> {
-  const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
-  const markup = Marked.parse(text);
-  console.log(markup)
-  return {
-    slug,
-    title: markup.meta.title,
-    publishedAt: new Date(markup.meta.published_at),
-    content: markup.content
-  };
+  try {
+    const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
+    const markup = Marked.parse(text);
+    return {
+      slug,
+      title: markup.meta.title,
+      publishedAt: new Date(markup.meta.published_at),
+      content: markup.content
+    };
+  } catch(e) {
+    if (e instanceof Deno.errors.NotFound) {
+      return false;
+    }
+  }
 }
