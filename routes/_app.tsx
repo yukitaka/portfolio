@@ -1,6 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/src/server/types.ts";
 import Menu from "@/components/header/menu.tsx";
+import Footer from "@/components/footer.tsx";
 
 export default function App({ Component }: AppProps) {
   const code = `function global_dark(change) {
@@ -25,6 +26,7 @@ export default function App({ Component }: AppProps) {
         <main class="container mx-auto p-4 flex">
           <Component />
         </main>
+        <Footer />
       </body>
     </html>
   );
