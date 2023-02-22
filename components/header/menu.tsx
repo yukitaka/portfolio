@@ -1,7 +1,7 @@
 import { BiHomeSmile } from "react-icons/bi";
 
 export default function Menu() {
-    const links = ["profile", "portfolio", "skills"]
+    const links = ["profile", "skills"]
     return (
         <ul class="mt-3 flex justify-center gap-3">
             <li>
