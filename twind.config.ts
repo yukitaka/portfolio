@@ -1,6 +1,12 @@
+import { apply } from "twind";
 import { Options } from "$fresh/plugins/twind.ts";
 
 export default {
+  preflight: {
+    h2: apply`bg-gray-900 text-white p-4`,
+    ul: apply`pl-8`,
+    "h2+p": apply`p-8`
+  },
   darkMode: "class",
   selfURL: import.meta.url,
   theme: {
