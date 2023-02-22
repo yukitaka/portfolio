@@ -3,4 +3,12 @@ title: SKILLS
 published_at: 2023-02-10
 ---
 
-This is skills!
+## Languages
+- php
+- ruby
+- golang
+- java
+- rust
+- python
+- typescript
+
