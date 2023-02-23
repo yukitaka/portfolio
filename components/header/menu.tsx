@@ -1,9 +1,14 @@
 import { BiHomeSmile } from "react-icons/bi";
+import { FaSearch } from "react-icons/fa";
 
-export default function Menu() {
+interface Data {
+  query: string;
+}
+
+export default function Menu<Data>({ query }) {
     const links = ["profile", "skills"]
     return (
-        <ul class="mt-3 flex justify-center gap-3">
+        <ul class="mt-3 flex justify-center items-center gap-3">
             <li>
                 <a href="/" style="border-style: none">
                     <BiHomeSmile size={22} />
@@ -16,6 +21,12 @@ export default function Menu() {
                 </li>
               ))
             }
+            <li>
+                <form>
+                    <input type="text" name="q" value={query} class="text-black rounded-full" />
+                    <button type="image" class="pl-2"><FaSearch size={16} /></button>
+                </form>
+            </li>
         </ul>
     );
 }
