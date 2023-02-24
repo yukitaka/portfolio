@@ -1,8 +1,8 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import { asset } from "$fresh/runtime.ts";
 import { getContent, Content } from "@/utils/contents.ts";
-import MainTitle from "@/components/title.tsx";
-import Contacts from "@/components/contacts.tsx";
+import MainTitle from "@/components/Title.tsx";
+import Contacts from "@/components/Contacts.tsx";
 
 export const handler: Handlers<Content[]> = {
   async GET(_req, ctx) {
