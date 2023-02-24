@@ -1,5 +1,5 @@
 import { BiHomeSmile } from "react-icons/bi";
-import { FaSearch } from "react-icons/fa";
+import Search from "@/islands/Search.tsx";
 
 interface Data {
   query: string;
@@ -24,7 +24,7 @@ export default function Menu<Data>({ query }) {
             <li>
                 <form>
                     <input type="text" name="q" value={query} class="text-black rounded-full" />
-                    <button type="image" class="pl-2"><FaSearch size={16} /></button>
+                    <Search />
                 </form>
             </li>
         </ul>
