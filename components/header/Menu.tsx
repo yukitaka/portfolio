@@ -8,7 +8,7 @@ interface Data {
 export default function Menu<Data>({ query }) {
     const links = ["profile", "skills"]
     return (
-        <ul class="mt-3 flex justify-center items-center gap-3">
+        <ul class="flex gap-3">
             <li>
                 <a href="/" style="border-style: none">
                     <BiHomeSmile size={22} />
@@ -21,12 +21,6 @@ export default function Menu<Data>({ query }) {
                 </li>
               ))
             }
-            <li>
-                <form>
-                    <input type="text" name="q" value={query} class="text-black rounded-full" />
-                    <Search />
-                </form>
-            </li>
         </ul>
     );
 }
