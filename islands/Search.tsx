@@ -12,9 +12,9 @@ export default function Search(props: Props) {
     return (
         <>
             <form>
-                <input type="text" name="q" value={props.query} class="text-black rounded-full" />
+                <input type="text" name="q" value={props.query} class="px-3 text-black rounded-full" />
             </form>
-            <button type="image" class="pl-2" onClick={() => setOpen(true)}><SearchButton /></button>
+            <button type="image" onClick={() => setOpen(true)}><SearchButton /></button>
 
             <SearchModal
                 isOpen={isOpen}
