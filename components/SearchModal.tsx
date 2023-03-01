@@ -21,11 +21,16 @@ export default function SearchModal(props: Props) {
         ref.current?.close();
         props.setOpen(false);
     }, [props.isOpen]);
+
     return (
       <>
         <dialog
           ref={ref}
           class={`p-0 bg-transparent ${props.class}`}
+          onClick={() => {
+            ref.current?.close();
+            props.setOpen(false);
+          }}
         >
           <div class={`w-full h-full bg-white ${props.class}`} onClick={(e) => e.stopPropagation()}>{props.children}</div>
         </dialog>
