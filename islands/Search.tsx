@@ -9,19 +9,15 @@ interface Props {
 export default function Search(props: Props) {
     const [isOpen, setOpen] = useState<boolean>(false);
 
-    async function handleSearch() {
-      setOpen(true);
-    }
-
-    async function handleClose() {
-      setOpen(false);
+    async function handleShow() {
+      setOpen(!isOpen);
     }
 
     return (
         <>
             <div>
                 <input type="text" name="q" value={props.query} class="px-3 text-black rounded-full" />
-                <button area-label="Search" onClick={handleSearch} class="pl-1"><SearchButton /></button>
+                <button area-label="Search" onClick={handleShow} class="pl-1"><SearchButton /></button>
             </div>
 
             <SearchModal
@@ -29,7 +25,7 @@ export default function Search(props: Props) {
                 setOpen={setOpen}
                 class="p-2 border-2 border-gray-100 rounded"
             >
-                <div class="frex flex-col" onClick={handleClose}><p>Contents</p></div>
+                <div class="frex flex-col"><p>Contents</p><button area-label="Close" onClick={handleShow}>Close</button></div>
             </SearchModal>
         </>
     );
