@@ -2,7 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/src/server/types.ts";
 import Menu from "@/components/header/Menu.tsx";
 import Footer from "@/components/Footer.tsx";
-import Search from "@/islands/Search.tsx";
+import FullTextSearch from "@/islands/FullTextSearch.tsx";
 
 export default function App({ Component }: AppProps) {
   const code = `function global_dark(change) {
@@ -23,7 +23,7 @@ export default function App({ Component }: AppProps) {
       <body class={`bg(gray-100 dark:gray-800) dark:text-gray-100`}>
         <header class="mt-3 flex justify-center items-center gap-3">
           <Menu query="" />
-          <Search />
+          <FullTextSearch />
         </header>
         <main class="container mx-auto p-4 flex">
           <Component />
