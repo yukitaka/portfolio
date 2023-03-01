@@ -1,12 +1,12 @@
 import { useState } from "preact/hooks";
-import SearchButton from "@/components/header/SearchButton.tsx";
+import { Search } from "@/components/Icons.tsx";
 import SearchModal from "@/components/SearchModal.tsx";
 
 interface Props {
   query: string
 }
 
-export default function Search(props: Props) {
+export default function FullTextSearch(props: Props) {
     const [isOpen, setOpen] = useState<boolean>(false);
 
     async function handleShow() {
@@ -17,7 +17,7 @@ export default function Search(props: Props) {
         <>
             <div>
                 <input type="text" name="q" value={props.query} class="px-3 text-black rounded-full" />
-                <button area-label="Search" onClick={handleShow} class="pl-1"><SearchButton /></button>
+                <button area-label="Search" onClick={handleShow} class="pl-1"><Search /></button>
             </div>
 
             <SearchModal

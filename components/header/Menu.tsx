@@ -1,5 +1,4 @@
 import { BiHomeSmile } from "react-icons/bi";
-import Search from "@/islands/Search.tsx";
 
 interface Data {
   query: string;
