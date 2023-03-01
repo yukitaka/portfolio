@@ -1,5 +1,5 @@
 import { useState } from "preact/hooks";
-import { Search } from "@/components/Icons.tsx";
+import { Search, Close } from "@/components/Icons.tsx";
 import SearchModal from "@/components/SearchModal.tsx";
 
 interface Props {
@@ -25,7 +25,7 @@ export default function FullTextSearch(props: Props) {
                 setOpen={setOpen}
                 class="p-2 border-2 border-gray-100 rounded"
             >
-                <div class="frex flex-col"><p>Contents</p><button area-label="Close" onClick={handleShow}>Close</button></div>
+                <div class="frex flex-col"><p>Contents</p><button area-label="Close" onClick={handleShow}><Close /></button></div>
             </SearchModal>
         </>
     );
