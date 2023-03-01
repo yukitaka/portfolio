@@ -13,6 +13,10 @@ export default function Search(props: Props) {
       setOpen(true);
     }
 
+    async function handleClose() {
+      setOpen(false);
+    }
+
     return (
         <>
             <div>
@@ -25,7 +29,7 @@ export default function Search(props: Props) {
                 setOpen={setOpen}
                 class="p-2 border-2 border-gray-100 rounded"
             >
-                <div class="frex flex-col"><p>Contents</p></div>
+                <div class="frex flex-col" onClick={handleClose}><p>Contents</p></div>
             </SearchModal>
         </>
     );
