@@ -9,12 +9,16 @@ interface Props {
 export default function Search(props: Props) {
     const [isOpen, setOpen] = useState<boolean>(false);
 
+    async function handleSearch() {
+      setOpen(true);
+    }
+
     return (
         <>
-            <form>
+            <div>
                 <input type="text" name="q" value={props.query} class="px-3 text-black rounded-full" />
-            </form>
-            <button type="image" onClick={() => setOpen(true)}><SearchButton /></button>
+                <button area-label="Search" onClick={handleSearch} class="pl-1"><SearchButton /></button>
+            </div>
 
             <SearchModal
                 isOpen={isOpen}
