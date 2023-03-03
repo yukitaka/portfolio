@@ -25,7 +25,10 @@ export default function FullTextSearch(props: Props) {
                 setOpen={setOpen}
                 class="p-2 border-2 border-gray-100 rounded"
             >
-                <div class="frex flex-col"><p>Contents</p><button area-label="Close" onClick={handleShow}><Close /></button></div>
+                <div class="flex flex-col">
+                    <button area-label="Close" onClick={handleShow} class="self-end"><Close /></button>
+                    <p>Contents</p>
+                </div>
             </SearchModal>
         </>
     );
