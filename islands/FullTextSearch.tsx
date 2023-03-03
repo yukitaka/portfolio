@@ -1,35 +1,29 @@
-import { useState } from "preact/hooks";
-import { Search, Close } from "@/components/Icons.tsx";
-import SearchModal from "@/components/SearchModal.tsx";
+import { Head } from "$fresh/runtime.ts";
+import { useRef, useEffect } from "preact/hooks";
+import docsearch from "https://esm.sh/@docsearch/js@3";
 
-interface Props {
-  query: string
-}
-
-export default function FullTextSearch(props: Props) {
-    const [isOpen, setOpen] = useState<boolean>(false);
-
-    async function handleShow() {
-      setOpen(!isOpen);
-    }
+export default function FullTextSearch() {
+    const ref = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (ref.current) {
+            docsearch({
+                appId: "VRFSECN91L",
+                apiKey: "651e5937ea652e7717e9386494277535",
+                indexName: "portfolio",
+                container: ref.current,
+            });
+        }
+    }, [ref.current]);
 
     return (
         <>
-            <div>
-                <input type="text" name="q" value={props.query} class="px-3 text-black rounded-full" />
-                <button area-label="Search" onClick={handleShow} class="pl-1"><Search /></button>
-            </div>
-
-            <SearchModal
-                isOpen={isOpen}
-                setOpen={setOpen}
-                class="p-2 border-2 border-gray-100 rounded"
-            >
-                <div class="flex flex-col">
-                    <button area-label="Close" onClick={handleShow} class="self-end"><Close /></button>
-                    <p>Contents</p>
-                </div>
-            </SearchModal>
+            <Head>
+                <link
+                    rel="stylesheet"
+                    href="/docsearch.css"
+                />
+            </Head>
+            <div class="h-9" ref={ref}></div>
         </>
     );
 }
