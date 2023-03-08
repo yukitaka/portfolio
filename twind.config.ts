@@ -1,7 +1,11 @@
-import { apply } from "twind";
-import { Options } from "$fresh/plugins/twind.ts";
+import { apply } from "https://esm.sh/@twind/core@1.1.3";
+import presetAutoprefix from "https://esm.sh/@twind/preset-autoprefix@1.0.7";
+import presetExt from "https://esm.sh/@twind/preset-ext@1.0.7";
+import presetTailwind from "https://esm.sh/@twind/preset-tailwind@1.1.4";
+import { Options } from "$fresh/plugins/twindv1.ts";
 
 export default {
+  presets: [presetAutoprefix(), presetExt(), presetTailwind()],
   preflight: {
     h2: apply`bg-gray-900 text-white p-4`,
     ul: apply`pl-8`,
