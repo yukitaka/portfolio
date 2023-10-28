@@ -1,4 +1,4 @@
-import { extract } from "$std/encoding/front_matter.ts";
+import { extract } from "$std/front_matter/mod.ts";
 import { join } from "$std/path/posix.ts";
 import { Marked } from "marked/mod.ts";
 
