@@ -1,6 +1,6 @@
-import { extract } from "$std/encoding/front_matter.ts";
-import { join } from "$std/path/posix.ts";
-import { Marked } from "marked/mod.ts";
+import { extract } from "$std/front_matter/yaml.ts";
+import { join } from "$std/path/mod.ts";
+import { Marked } from "$gfm";
 
 const DIRECTORY = "./contents";
 
@@ -26,17 +26,21 @@ export async function getContents(): Promise<Content[]> {
 
 export async function getContent(slug: string): Promise<Content | null> {
   try {
-    const text = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
-    const markup = Marked.parse(text);
+    const md = await Deno.readTextFile(join(DIRECTORY, `${slug}.md`));
+    const extracted = extract(md);
+    const meta = extracted.attrs;
+    const markup = Marked.marked.parse(extracted.body);
     return {
       slug,
-      title: markup.meta.title,
-      publishedAt: new Date(markup.meta.published_at),
-      content: markup.content
+      title: meta.title as string,
+      publishedAt: new Date(meta.published_at as string),
+      content: markup
     };
   } catch(e) {
     if (e instanceof Deno.errors.NotFound) {
-      return false;
+      return null;
     }
   }
+
+  return null;
 }
