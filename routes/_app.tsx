@@ -20,12 +20,12 @@ export default function App({ Component }: AppProps) {
           }}
         />
       </Head>
-      <body class={`bg(gray-100 dark:gray-800) dark:text-gray-100`}>
-        <header class="mt-3 flex justify-center items-center gap-3">
+      <body className="bg-gray-800 text-gray-100">
+        <header className="mt-3 flex justify-center items-center gap-3 w-screen">
           <Menu query="" />
           <FullTextSearch />
         </header>
-        <main class="container mx-auto p-4 flex">
+        <main className="container mx-auto p-4 flex">
           <Component />
         </main>
         <Footer />
